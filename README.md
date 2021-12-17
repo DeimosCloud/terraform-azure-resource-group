@@ -43,21 +43,34 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| azurerm | n/a |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [azurerm_management_lock.resource-group-level](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_lock) | resource |
+| [azurerm_resource_group.resource_group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| location | Location to deploy resources. | `string` | n/a | yes |
-| name | Resource group name | `string` | n/a | yes |
-| tags | n/a | `any` | n/a | yes |
+| <a name="input_location"></a> [location](#input\_location) | Location to deploy resources. | `string` | n/a | yes |
+| <a name="input_lock"></a> [lock](#input\_lock) | If true, the resource group is locked and cannot be deleted | `bool` | `false` | no |
+| <a name="input_lock_level"></a> [lock\_level](#input\_lock\_level) | Specifies the Level to be used for this Lock. Possible values are CanNotDelete and ReadOnly | `string` | `"CanNotDelete"` | no |
+| <a name="input_lock_notes"></a> [lock\_notes](#input\_lock\_notes) | Specifies some notes about the lock. Maximum of 512 characters | `string` | `""` | no |
+| <a name="input_name"></a> [name](#input\_name) | Resource group name | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | n/a | `any` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| name | n/a |
-| resource\_group\_id | n/a |
-
+| <a name="output_name"></a> [name](#output\_name) | n/a |
+| <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
