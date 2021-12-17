@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "resource_group" {
   tags     = var.tags
 }
 
-resource "azurerm_management_lock" "resource-group-level" {
+resource "azurerm_management_lock" "this" {
   count      = var.lock ? 1 : 0
   name       = "${var.name}-lock"
   scope      = azurerm_resource_group.resource_group.id
