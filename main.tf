@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "resource_group" {
 
 resource "azurerm_management_lock" "this" {
   count      = var.lock ? 1 : 0
-  name       = "${var.name}-lock"
+  name       = "${var.name}-rg-lock"
   scope      = azurerm_resource_group.resource_group.id
   lock_level = var.lock_level
   notes      = var.lock_notes
